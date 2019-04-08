@@ -5,38 +5,52 @@ import "../Square.css";
 const getTitile = () => "Function title";
 
 export default class Square extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      currentColor: this.props.initialColor
+    }
+  }
+
+
+
+  setCurrentColor = () => {
+    let color = this.testInput.value
+    this.setState({
+      currentColor: color
+    })
+  }
+
   render() {
-    let textInput;
-    let currentColor;
 
     let style = {
       width: "100px",
       height: "100px",
       border: "2px solid black",
-      backgroundColor: this.props.initialColor
-    };
+      backgroundColor: this.state.currentColor
+    }
+
 
     return (
-      <div className="Square" style={style}>
+      <div >
+        <div className="Square" style={style}>
+
+        </div>
         <div className="SquareControls">
           <input
-            ref={element => {
-              textInput = element;
-            }}
+            ref={(input) => this.testInput = input}
             type="text"
             name=""
             id=""
             placeholder="Color..."
           />
           <button
-            onClick={() => {
-              currentColor = textInput.value;
-            }}
+            onClick={this.setCurrentColor}
           >
             Ok
           </button>
         </div>
-      </div>
+      </div >
     );
   }
 }
