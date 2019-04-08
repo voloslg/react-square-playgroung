@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import "./Square.css";
 
 export default class Square extends Component {
   render() {
@@ -10,7 +11,11 @@ export default class Square extends Component {
       backgroundColor: this.props.initialColor
     };
 
-    return <div style={style}>{/* <h1>Square</h1> */}</div>;
+    return (
+      <div className="Square" style={style}>
+        {/* <h1>Square</h1> */}
+      </div>
+    );
   }
 }
 
