@@ -7,7 +7,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Square />
+        <Square initialColor={"blue"} />
+        <Square initialColor={"red"} />
+        <Square initialColor={"green"} />
       </div>
     );
   }

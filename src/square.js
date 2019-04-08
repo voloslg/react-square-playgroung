@@ -5,13 +5,10 @@ export default class Square extends Component {
     let style = {
       width: "200px",
       height: "200px",
-      border: "1px solid green"
+      border: "2px solid black",
+      backgroundColor: this.props.initialColor
     };
 
-    return (
-      <div style={style}>
-        <h1>Square</h1>
-      </div>
-    );
+    return <div style={style}>{/* <h1>Square</h1> */}</div>;
   }
 }
