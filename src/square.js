@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 export default class Square extends Component {
   render() {
@@ -12,3 +13,13 @@ export default class Square extends Component {
     return <div style={style}>{/* <h1>Square</h1> */}</div>;
   }
 }
+
+// Props validation
+Square.propTypes = {
+  initialColor: PropTypes.string.isRequired
+};
+
+// Default props
+Square.defaultProps = {
+  initialColor: "black"
+};
