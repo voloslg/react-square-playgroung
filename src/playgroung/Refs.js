@@ -1,29 +1,41 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import "./Square.css";
+import "../Square.css";
 
 const getTitile = () => "Function title";
 
 export default class Square extends Component {
   render() {
-    const theTitle = <strong>Bold title</strong>;
-
-    let elements = [<p>1 element</p>, <p>2 element</p>, <p>3 element</p>];
+    let textInput;
+    let currentColor;
 
     let style = {
-      width: "200px",
-      height: "200px",
+      width: "100px",
+      height: "100px",
       border: "2px solid black",
       backgroundColor: this.props.initialColor
     };
 
     return (
       <div className="Square" style={style}>
-        {/* {getTitile()} */}
-        {/* {2 + 2} */}
-        {/* {theTitle} */}
-        {/* {elements} */}
-        {this.props.showTitle && <strong>TITLE</strong>}
+        <div className="SquareControls">
+          <input
+            ref={element => {
+              textInput = element;
+            }}
+            type="text"
+            name=""
+            id=""
+            placeholder="Color..."
+          />
+          <button
+            onClick={() => {
+              currentColor = textInput.value;
+            }}
+          >
+            Ok
+          </button>
+        </div>
       </div>
     );
   }
