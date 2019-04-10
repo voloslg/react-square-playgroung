@@ -8,9 +8,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Square />
-        <Square initialColor={"red"} />
-        <Square initialColor={"green"} />
+        <Square size={30} />
+        <Square size={150} initialColor={"red"} />
+        <Square size={50} initialColor={"green"} />
 
         {/* <Refs /> */}
       </div>

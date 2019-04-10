@@ -19,9 +19,11 @@ export default class Square extends Component {
   };
 
   render() {
+    let size = `${this.props.size}px`;
+
     let style = {
-      width: "100px",
-      height: "100px",
+      width: size,
+      height: size,
       border: "2px solid black",
       backgroundColor: this.state.currentColor
     };
@@ -47,7 +49,8 @@ export default class Square extends Component {
 
 // Props validation
 Square.propTypes = {
-  initialColor: PropTypes.string.isRequired
+  initialColor: PropTypes.string.isRequired,
+  size: PropTypes.number.isRequired
 };
 
 // Default props
