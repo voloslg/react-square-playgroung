@@ -1,4 +1,5 @@
 .Square {
+  float: left;
   margin: 20px;
   /* position: relative; */
 }
@@ -10,4 +11,8 @@
   right: -250px; */
   margin: 20px;
   /* display: block; */
+}
+
+.SquareContainer .clear {
+  clear: both;
 }
